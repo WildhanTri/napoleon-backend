@@ -41,11 +41,11 @@ public class ReportData implements Serializable {
     private Reportline reportline;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at", nullable = false, columnDefinition = "TIMESTAMP default CURRENT_TIMESTAMP")
+    @Column(name = "created_at", nullable = false, columnDefinition = "DATETIME default CURRENT_TIMESTAMP")
     private Date createdAt = new Date();
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "updated_at", nullable = false, columnDefinition = "TIMESTAMP on update CURRENT_TIMESTAMP")
+    @Column(name = "updated_at", nullable = false, columnDefinition = "DATETIME on update CURRENT_TIMESTAMP")
     private Date updatedAt = new Date();
 
     public Long getId() {
