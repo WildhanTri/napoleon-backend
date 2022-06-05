@@ -16,8 +16,7 @@ echo "${HEROKU_PRIVATE_KEY}" > ${HOME}/.ssh/id_rsa
 chmod 600 ${HOME}/.ssh/id_rsa
 
 # Preload the known_hosts file  (see "version 2" below)
-# echo '|1|longstringofstuff= ecdsa-sha2-nistp256 more stuff=
-# |1|morestuff= ecdsa-sha2-nistp256 yetmorestuff=' > ${HOME}/ssh/known_hosts
+echo '|1|luBqutGcP9OlzNqReApvZugJj+g=|AZvrLmQp6EOM6mQyK1WKhrHUAtw= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPqjsu9kvld5vNqBlpbD0mOf7KTEFAPtbJ1gFVMVHUCEZXihg2x5EVBBuilyLW7N1D6wkj2d8eUjfQVptrmBNZg=' > ${HOME}/.ssh/known_hosts
 
 # Start the SSH tunnel if not already running
 SSH_CMD="ssh -v -f -i ${HOME}/.ssh/id_rsa -N -L 3307:${REMOTE_MYSQL_HOST}:3306 ${REMOTE_USER}@${REMOTE_SITE}"
